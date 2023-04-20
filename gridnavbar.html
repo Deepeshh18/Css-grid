@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .container{
+     display: grid;
+     grid-gap: 1rem;
+     grid-template-areas: 
+     'navbar navbar navbar'
+     'section section section'
+     'aside aside aside';
+
+       
+        }
+        @media only screen and (max-width:300px) {
+            body{
+                background-color: red;
+            }
+            
+        }
+        .container{
+            grid-template-areas: 
+     'navbar navbar navbar'
+     'section section section'
+     'aside aside aside'
+     'footer footer footer';
+        }
+     @media only screen and (max-width:300px)and(min-width:500px){
+            body{
+                background-color: blue;
+            }
+            .container{
+          grid-template-areas: 
+          'navbar navbar navbar navbar'
+          'section section section section'
+          'aside aside aside aside'
+          'footer footer footer footer';
+        }
+        aside{
+          display: inline-block;
+        }
+        span{
+          display: block;
+          text-align: center;
+        }
+      }
+
+            @media only screen and (min-width: 500px) and (max-width: 800px){
+        body{
+          background-color: seagreen;
+        }
+        .container{
+          grid-template-areas: 
+          'navbar navbar navbar navbar'
+          'section section section section'
+          'aside aside aside aside'
+          'footer footer footer footer';
+        }
+
+        span{
+          display: block;
+          text-align: center;
+        }
+      }
+
+            @media (min-width: 800px) {
+        body{
+          background-color: rgb(196, 196, 158) ;
+        }
+      }
+
+
+      .bdr{
+        border: 2px solid black;
+        padding: 10px 23px;
+        background-color: wheat;
+      }
+
+      nav{
+        grid-area: navbar;
+      }
+
+      section{
+        grid-area: section;
+      }
+
+      aside{
+        grid-area: aside;
+      }
+
+      footer{
+        grid-area: footer;
+        text-align: center;
+      }
+
+
+            
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="bdr">
+            <span>Home</span>
+            <span>About</span>
+            <span>Services</span>
+            <span>Contact</span>
+        </nav>
+        <section class="btr">
+            <h2>Learn css</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dignissimos reprehenderit quisquam repellat facere adipisci molestias ratione provident incidunt nemo officiis accusamus quam facilis debitis culpa possimus voluptatibus voluptate esse, aliquid libero est beatae id. Fugiat soluta blanditiis ut omnis perspiciatis. Corrupti, doloremque eius tempore incidunt, reiciendis beatae quasi nisi blanditiis qui molestias ea mollitia aliquam error impedit ad veniam eos! Praesentium officia labore, explicabo voluptatibus odit laborum accusantium facilis voluptates aliquam nihil! Architecto blanditiis incidunt, alias commodi necessitatibus, debitis iusto veniam fuga ab ea molestias labore, perferendis aut soluta odit minima quaerat. Odio ducimus iure at obcaecati inventore ratione.</p>
+        </section>
+        <aside class="bdr">
+<h1>more about us</h1>
+        </aside>
+        <footer>
+            @copyright
+        </footer>
+    </div>
+</body>
+</html>
